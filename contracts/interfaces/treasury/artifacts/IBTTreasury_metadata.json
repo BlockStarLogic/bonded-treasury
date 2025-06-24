@@ -1,0 +1,265 @@
+{
+	"compiler": {
+		"version": "0.8.30+commit.73712a01"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_investmentId",
+						"type": "uint256"
+					}
+				],
+				"name": "divest",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "_divestmetId",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_divestmentId",
+						"type": "uint256"
+					}
+				],
+				"name": "getDivestment",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "id",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "investmentId",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "actualReturn",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "createDate",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct Divestment",
+						"name": "_divestment",
+						"type": "tuple"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_investmentId",
+						"type": "uint256"
+					}
+				],
+				"name": "getDivestmentByInvestmentId",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "id",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "investmentId",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "actualReturn",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "createDate",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct Divestment",
+						"name": "_divestment",
+						"type": "tuple"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_investmentId",
+						"type": "uint256"
+					}
+				],
+				"name": "getInvestment",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "id",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "fundId",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "marketId",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "positionId",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "minimumExpectedReturn",
+								"type": "uint256"
+							},
+							{
+								"internalType": "address",
+								"name": "treasurer",
+								"type": "address"
+							},
+							{
+								"internalType": "address",
+								"name": "owner",
+								"type": "address"
+							},
+							{
+								"internalType": "uint256",
+								"name": "createDate",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "divestmentDate",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct Investment",
+						"name": "_investment",
+						"type": "tuple"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getInvestmentIds",
+				"outputs": [
+					{
+						"internalType": "uint256[]",
+						"name": "_investmentIds",
+						"type": "uint256[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "fundId",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "marketId",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct ProtoInvestment",
+						"name": "_investment",
+						"type": "tuple"
+					}
+				],
+				"name": "invest",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "_investmentId",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/interfaces/treasury/IBTTreasury.sol": "IBTTreasury"
+		},
+		"evmVersion": "prague",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/interfaces/treasury/IBTTreasury.sol": {
+			"keccak256": "0x31a96864163778f69a1ec984b22744de25223b8734be7b8654fcff4db8c87ce7",
+			"license": "UNLICENSE",
+			"urls": [
+				"bzz-raw://b6fc58c3c7dc21787dd075eef39a8c24aee27f568ad6c87dbc2d4c544a24c352",
+				"dweb:/ipfs/QmRDBijyHkR9rx36PXTBFaoeEGpYUmpS4ZVsDu1b2aqLfX"
+			]
+		},
+		"contracts/structs/BTStructs.sol": {
+			"keccak256": "0x275e5e76664fb099d5ea27c20cb0950f40a341c2abcd97cf8751be4035d3fc17",
+			"license": "UNLICENSE",
+			"urls": [
+				"bzz-raw://de6fb0392be5530faa3d5062bbf80389e3d945cae0b69785504069e5a0e71043",
+				"dweb:/ipfs/QmPuDaLWNJXis888gfXStvL6uYXkguegJemsc6MDDFxKrZ"
+			]
+		}
+	},
+	"version": 1
+}
