@@ -116,6 +116,9 @@ library LBTLib {
         return (_fundReturn, _productFee, _treasurerReturn); 
     }
 
-
+    function calculateMarketVaultFlushExitBalance(uint256 _inputBalanceOutputToken, uint256 _flushBalanceOutputToken, uint256 _compensatedExitBalanceInputToken ) internal pure returns (uint256 _flushExitBalanceInputToken) {
+        _flushExitBalanceInputToken = (_compensatedExitBalanceInputToken * ((_inputBalanceOutputToken / _flushBalanceOutputToken) * 100))/100;
+        return _flushExitBalanceInputToken; 
+    }
     
 }

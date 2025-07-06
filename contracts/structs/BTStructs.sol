@@ -62,8 +62,6 @@ struct ProtoProduct {
     uint256 purchaseFee; 
 }
 
-
-
 enum BondStatus {ACTIVE, DELINQUENT, FROZEN, SETTLED}
 
 enum Period {DAY, WEEK, MONTH, QUARTER, HALF, YEAR}
@@ -156,9 +154,15 @@ struct MarketSettlement {
 
 enum VehicleType {UNISWAP, ONE_INCH, DYDX, PANCAKE}
 
+enum VehicleStatus {ENABLED, DISABLED}
+
+enum MarketVaultStatus {OPEN, FLUSHED, CLOSED}
+
 enum MarketType {TOKEN, POOL, RWA}
 
 enum MarketStatus {OPEN, SUSPENDED, CLOSED}
+
+
 
 struct Market { 
     uint256 id; 

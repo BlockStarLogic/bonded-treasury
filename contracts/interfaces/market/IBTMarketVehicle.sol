@@ -1,9 +1,11 @@
 // SPDX-License-Identifier: UNLICENSE
 pragma solidity ^0.8.30;
 
-import {Position, MarketSettlement, VehicleType, MarketType} from "../../structs/BTStructs.sol"; 
+import {Position, MarketSettlement, VehicleType, VehicleStatus, MarketType} from "../../structs/BTStructs.sol"; 
 
 interface IBTMarketVehicle {
+
+    function getVehicleStatus() view external returns (VehicleStatus _vehicleStatus); 
 
     function getVehicleType () view external returns (VehicleType _vehicleType); 
 
@@ -21,6 +23,5 @@ interface IBTMarketVehicle {
 
     function closePosition(uint256 _position) external returns (uint256 _settlementId); 
 
-    function close() external returns (bool _closed); 
-
+    function flushMarket(uint256 marketId) external returns (uint256 _marketBalance, uint256 _issuedCompensation); 
 }

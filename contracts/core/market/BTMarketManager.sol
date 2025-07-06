@@ -96,7 +96,8 @@ contract BTMarketManager is IBTVersion, IBTMarketManager {
     function closeMarket(uint256 _marketId) external marketOwnerOnly(_marketId) returns (bool _marketClosed){
         require(knownMarketId[_marketId] && marketById[_marketId].status != MarketStatus.CLOSED, "Market already closed"); 
         marketById[_marketId].status = MarketStatus.CLOSED; 
-
+        IBTMarketVehicle vehicle_ = IBTMarketVehicle(marketById[_marketId].vehicle); 
+        (uint256 _marketBalance, uint256 _compensationIssued) = vehicle_.flushMarket(_marketId);
 
         return true; 
     }
