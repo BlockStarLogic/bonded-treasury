@@ -9,7 +9,7 @@ import "../../interfaces/fund/IBTFundManager.sol";
 import "../../interfaces/fund/IBTFundVault.sol";
 
 import "../../interfaces/market/IBTMarketManager.sol";
-import "../../interfaces/market/IBTMarket.sol"; 
+import "../../interfaces/market/IBTMarketVehicle.sol"; 
 
 import "../../interfaces/product/IBTProductManager.sol"; 
 

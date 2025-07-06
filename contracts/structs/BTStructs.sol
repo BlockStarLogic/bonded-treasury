@@ -162,6 +162,7 @@ enum MarketStatus {OPEN, SUSPENDED, CLOSED}
 
 struct Market { 
     uint256 id; 
+    string name; 
     address owner;
     MarketType mType; 
     uint256 bondId; 
@@ -170,6 +171,8 @@ struct Market {
     Range lossTolerance;
     Range principal; 
     address inputErc20; 
+    address outputErc20; 
+    address vault; 
     address vehicle;
     VehicleType vType;
     Range term; 
@@ -179,7 +182,8 @@ struct Market {
     uint256 expired;
 }
 
-struct ProtoMarket { 
+struct ProtoMarket {
+    string name; 
     address owner;
     MarketType mType; 
     uint256 bondId; 
@@ -188,6 +192,7 @@ struct ProtoMarket {
     Range lossTolerance;
     Range principal; 
     address inputErc20; 
+    address outputErc20; 
     address vehicle;
     VehicleType vType;
     Range term; 
